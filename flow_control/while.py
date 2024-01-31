@@ -15,6 +15,10 @@ while numero < 100:
 
 print("*** Nueva terminal ***")
 comando = ""
-while comando.lower() != "salir":
+while True:
     comando = input("$ ")
-    print("->", comando if comando.lower() != "salir" else "Bye")
+    if comando.lower() != "salir":
+        print("->", comando)
+    else:
+        print("Bye")
+        break
