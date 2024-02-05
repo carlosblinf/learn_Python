@@ -13,16 +13,15 @@ def trim(text):
 
 def reverse(text):
     reverse_string = ""
-    largo = len(text)
-    for index in range(largo):
-        char = text[largo-1-index]
-        reverse_string += char
+    for char in text:
+        reverse_string = char + reverse_string
     return reverse_string
 
 
 def es_palindromo(text=""):
     trim_text = trim(text)
     reverse_trim = reverse(trim_text)
+    print(reverse_trim)
     return reverse_trim.lower() == trim_text.lower()
 
 
