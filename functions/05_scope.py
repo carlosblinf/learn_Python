@@ -6,8 +6,8 @@ saludo = "Hola a todos"
 
 def saludar():
     # inner scope saludar
+    print(saludo)  # local variable referenced before assigment
     saludo = "Hola mundo"
-    print(saludo)
 
 
 def saludarPersona():
