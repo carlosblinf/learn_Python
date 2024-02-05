@@ -6,7 +6,8 @@ saludo = "Hola a todos"
 
 def saludar():
     # inner scope saludar
-    print(saludo)  # local variable referenced before assigment
+    global saludo
+    print(saludo)
     saludo = "Hola mundo"
 
 
@@ -15,6 +16,6 @@ def saludarPersona():
     saludo = "Hola Carlos"
     print(saludo)
 
-
 saludar()
+print(saludo)
 saludarPersona()
